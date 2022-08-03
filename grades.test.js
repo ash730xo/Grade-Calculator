@@ -46,10 +46,12 @@ describe('getGrade', () => {
         ['D',61],
         ['D',50]       
     ])
-    ('should return a grade of %s for a score of %n ', (score) => {
+    ('should return a grade of %s for a score of %n ', (letter, score) => {
         const grade = getGrade(score)
-        expect(grade).toEqual('A+')
+        expect(grade).toEqual(letter)
+
     })
+
 
     it('should return an F for any score under 50', () => {
         for (let i = 49; i > 0; i--) {
