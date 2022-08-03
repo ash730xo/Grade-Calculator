@@ -1,52 +1,55 @@
 'use strict'
 
 function getGrade(grade) {
-    let counter = 0;
-    if (counter >= 97 ) {
-        console.log("You got an A+ ")
+    if (grade >= 97 ) {
+        return ('A+')
 
-    }
-     else if (counter <= 96 && counter >= 93) {
-        console.log("You got an A ")
+    } 
+    else if (grade <= 96 && grade >= 93) {
+      return ('A')
      }
-     else if (counter <= 92 && counter >= 90) {
-        console.log("You got an A- ")
-
-     }
-     else if (counter <= 89 && counter >= 87){
-        console.log("You got a B+ ")
+     else if (grade <= 92 && grade >= 90) {
+      return ('A-')
 
      }
-     else if (counter <= 86 && counter >= 83) {
-        console.log("You got a B ")
+     else if (grade <= 89 && grade >= 87){
+      return ('B+')
 
      }
-     else if (counter <= 82 && counter >= 80) {
-        console.log("You got a B- ")
+     else if (grade <= 86 && grade >= 83) {
+      return ('B')
 
      }
-     else if (counter <= 79 && counter >= 77) {
-        console.log("You got a C+ ")
+     else if (grade <= 82 && grade >= 80) {
+      return ('B-')
+
+     }
+     else if (grade <= 79 && grade >= 77) {
+      return ('C+')
 
      }
 
-     else if (counter <= 76 && counter >= 73) {
-        console.log("You got a C ")
+     else if (grade <= 76 && grade >= 73) {
+      return ('C')
 
      }
-     else if (counter <= 72 && counter >= 70) {
-        console.log("You got a C- ")
+     else if (grade <= 72 && grade >= 70) {
+      return ('C-')
 
      }
-     else if (counter <= 69 && counter >= 50) {
-        console.log("You got a D ")
+     else if (grade <= 69 && grade >= 50) {
+      return ('D')
 
      }
-     else {
+     else if (grade < 50 ){
+      return ('F')
         console.log("You got a F ")
      }
-
-    return counter
+      else {
+         console.log("Did somethibg wrong. Try again!")
+      
+      }
 }
+
 
 module.exports = getGrade
